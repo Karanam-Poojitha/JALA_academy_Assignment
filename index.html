@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Project</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/controller.js"></script>
+  <script src="app/directive.js"></script>
+  <!-- <script>
+    app.directive('customDirective', function() {
+        return {
+            template: '<p>This is a custom directive!</p>'
+        };
+    });
+  </script> -->
+</head>
+<body  ng-controller="ExpressionController">
+
+  <h2>Change Background Color</h2>
+  <input type="text" ng-model="bgColor" placeholder="Enter a color">
+  <input type="text" ng-style="{'background-color': bgColor}" placeholder="Text box changes color">
+
+
+  <h2>Directive and Controller Example</h2>
+<div custom-directive></div>
+
+  <h2>Binding Data with ng-model</h2>
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p>Hello, {{ name }}</p>
+
+  <h2>ng-init and ng-repeat Example</h2>
+  <ul ng-init="fruits=['Apple', 'Banana', 'Cherry']">
+        <li ng-repeat="fruit in fruits">{{ fruit }}</li>
+  </ul>
+
+
+    <h2>Scope Example</h2>
+    <div ng-controller="ScopeExampleController">
+        <p>Local Message: {{ localMessage }}</p>
+        <p>Global Message: {{ globalMessage }}</p>
+    </div>
+    
+</body>
+</html>
